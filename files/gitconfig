@@ -8,8 +8,8 @@
   templatedir = ~/.git
 
 [user]
-  name = Albert Wang
-  email = albertyw@mit.edu
+  name = Dauren Tatubaev
+  email = dauren@gmail.com
 
   
 # Git command Configuration
