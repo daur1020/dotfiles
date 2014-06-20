@@ -55,6 +55,10 @@ source $HOME/.dotfiles/bin/django-completion.sh
 [[ -r /usr/local/bin/virtualenvwrapper.sh ]] && . /usr/local/bin/virtualenvwrapper.sh
 [[ -r $HOME/.bashrc_local ]] && . ~/.bashrc_local
 
+### Source virtualenv
+. /usr/local/bin/virtualenvwrapper.sh
+source /envs/default/bin/activate
+
 ### Git updates
-~/.dotfiles/check-git-updates.sh | grep "YOU" &
+#~/.dotfiles/check-git-updates.sh | grep "YOU" &
 disown
