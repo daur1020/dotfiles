@@ -12,7 +12,9 @@ export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export TERM=xterm
 export HISTCONTROL=ignorespace
-PS1='\[\e[1;31m\]\u@\[\e[1;33m\]\h\[\e[1;31m\] \w \$ \[\e[0m\]'
+# PS1='\[\e[1;31m\]\u@\[\e[1;33m\]\h\[\e[1;31m\] \w \$ \[\e[0m\]'
+PS1='\[\033[01;34m\]\w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\]\$\[\033[00m\]'
+GIT_PS1_SHOWDIRTYSTATE=1
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
@@ -35,6 +37,15 @@ alias alert='echo -e "\a"'
 if [[ $(uname) == Linux ]]; then
     alias ls='ls --color=always'
 fi
+alias ll='ls -lh'
+alias du='du -sh'
+alias df='df -h'
+alias x='exit'
+alias cl='clear'
+
+### Vagrant and Django
+alias vs='vagrant ssh'
+alias vp='vagrant provision'
 
 ### Sourcing other scripts
 source $HOME/.dotfiles/bin/git-completion.sh
